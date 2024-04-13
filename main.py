@@ -3,6 +3,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as gen_ai
+from PIL import Image
 
 load_dotenv()
 
@@ -11,6 +12,9 @@ st.set_page_config(
     page_icon=":brain:",
     layout="centered"
 )
+
+image = Image.open("Coder_1.gif")
+st.image(image)
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
